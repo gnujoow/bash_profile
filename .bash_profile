@@ -16,7 +16,8 @@ PATH=$GIT_HOME:$PATH
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 #hide computername
-export PS1="\W \$"
+#export PS1="\W \$"
+export PS1="\e[0;36m\W\e[m \$ "
 
 #hightlight path
 alias ls="ls -G"
