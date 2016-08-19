@@ -15,9 +15,14 @@ PATH=$GIT_HOME:$PATH
 #postgresql
 export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
+#github branch show
+parse_git_branch() {
+  git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ (\1)/'
+}
+
 #hide computername
 #export PS1="\W \$"
-export PS1="\e[0;36m\W\e[m \$ "
+export PS1="\e[0;36m\W\e[m\e[32m\$(parse_git_branch)\[\033[00m\] $ "
 
 #hightlight path
 alias ls="ls -G"
