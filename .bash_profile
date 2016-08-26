@@ -22,7 +22,7 @@ parse_git_branch() {
 
 #hide computername
 #export PS1="\W \$"
-export PS1="\e[0;36m\W\e[m\e[32m\$(parse_git_branch)\[\033[00m\] $ "
+export PS1="\\[\e[0;36m\W\e[m\e[32m\$(parse_git_branch)\[\033[00m\] $ "
 
 #hightlight path
 alias ls="ls -G"
